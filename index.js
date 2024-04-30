@@ -49,7 +49,7 @@ const questions = [
     },
 {
         type: "input",
-        name: "github",
+        name: "update",
         message: "Which employee's role to you want to update?",
 },
 
