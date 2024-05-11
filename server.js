@@ -119,7 +119,7 @@ const questions = async()=>{
         )
         
         return new Promise((resolve,reject)=>{
-            db.query("INSERT INTO roles(id, title, salary, department_id) VALUES (?,?,?,?)", 
+            db.query("INSERT INTO roles (id, title, salary, department_id) VALUES (?,?,?,?)", 
              [id,title,salary,department_id], (error, results)=>{
                 if (error){
                     console.log(error)
@@ -148,8 +148,8 @@ const questions = async()=>{
         )
         
         return new Promise((resolve,reject)=>{
-            db.query("INSERT INTO roles(id, title, salary, department_id) VALUES (?,?,?,?)", 
-             [id,title,salary,department_id], (error, results)=>{
+            db.query("UPDATE roles SET title = ?, salary = ?, department_id = ? WHERE id = ?", 
+             [title,salary,department_id,id ], (error, results)=>{
                 if (error){
                     console.log(error)
                     return
