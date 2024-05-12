@@ -44,7 +44,7 @@ const questions = async()=>{
     }
     else if (action === "View all employees"){
         return new Promise((resolve,reject)=>{
-            db.query("SELECT * FROM employess", (error, results)=>{
+            db.query("SELECT * FROM employee", (error, results)=>{
                 console.log(results)
                 resolve(results)
             })
